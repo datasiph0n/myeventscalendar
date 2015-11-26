@@ -89,7 +89,7 @@ echo '<p>Welcome to the PHP Calendar installation process.</p>
 ';
 
 foreach($_POST as $key => $value) {
-	echo "<input name=\"$key\" value=\"$value\" type=\"hidden\">\n";
+	echo "<input name=\"htmlspecialchars($key)\" value=\"htmlspecialchars($value)\" type=\"hidden\">\n";
 }
 
 $drop_tables = isset($_POST["drop_tables"]) && $_POST["drop_tables"] == "yes";
